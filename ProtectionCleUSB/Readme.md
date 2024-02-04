@@ -1,6 +1,6 @@
 # Suppression Write Protect On.
 
-### Prise des infos.
+### Prise des infos Hardware.
 
 		udevadm info /dev/sdb -a | head -n 100000
 		lsmod | grep usb
