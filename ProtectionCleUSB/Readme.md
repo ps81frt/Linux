@@ -1,6 +1,6 @@
-# Suppression Write Protect On
+# Suppression Write Protect On.
 
-### Prise des infos
+### Prise des infos.
 
 		udevadm info /dev/sdb -a | head -n 100000
 		lsmod | grep usb
@@ -20,11 +20,11 @@
 
 
 
-### Supprimer le module usb_storage
+### Supprimer le module usb_storage.
 
 		sudo modprobe -r $(lsmod | sed -n 's:,: :g ; s,^usb_storage[ 0-9]*,,p') usb_storage
 
-### Modification
+### Modification.
  
 		lsusb
 		sudo modprobe usb_storage quirks=0781:5583:w
